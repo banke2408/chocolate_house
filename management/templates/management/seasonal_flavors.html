@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Flavors</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'management/styles.css' %}">
+</head>
+<body>
+    <h1>Seasonal Flavors</h1>
+    <ul>
+        {% for flavor in flavors %}
+            <li>
+                {{ flavor.flavor_name }} (Available Until: {{ flavor.available_until }})
+                <a href="{% url 'update_seasonal_flavor' flavor.id %}">Edit</a>
+                <a href="{% url 'delete_seasonal_flavor' flavor.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_seasonal_flavor' %}">Add Seasonal Flavor</a>
+</body>
+</html>
+

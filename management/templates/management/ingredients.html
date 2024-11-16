@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Inventory</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'management/styles.css' %}">
+</head>
+<body>
+    <h1>Ingredient Inventory</h1>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient.ingredient_name }}: {{ ingredient.quantity }} units 
+                <a href="{% url 'update_ingredient' ingredient.id %}">Edit</a>
+                <a href="{% url 'delete_ingredient' ingredient.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_ingredient' %}">Add Ingredient</a>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+# Python Bytecode Files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environments
+env/
+venv/
+
+# Django Specific
+db.sqlite3
+/media/
+staticfiles/
+*.log
+
+# Environment Variables
+.env
+
+# Pytest Cache
+.pytest_cache/
+
+# VSCode Settings
+.vscode/
+
+# macOS System Files
+.DS_Store
+
+# Docker
+*.pid
+*.tar
+*.bak
+*.tmp
+docker-compose.override.yml
+
+# Node Modules (if applicable)
+node_modules/
+
+# Nginx
+nginx/*.conf~
+
+# Coverage Reports
+htmlcov/
+.coverage
+*.cover
+*.coverage.*
+
+# Debugging Files
+*.swp
+*.swo
+*.bak
+
+# Other Generated Files
+*.idea/
+

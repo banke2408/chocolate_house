@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate House Management</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'management/styles.css' %}">
+</head>
+<body>
+<h1>Chocolate House Management</h1>
+<ul>
+    <li><a href="{% url 'list_seasonal_flavors' %}">Seasonal Flavors</a></li>
+    <li><a href="{% url 'list_feedback' %}">Customer Feedback</a></li>
+</ul>
+</body>
+</html>

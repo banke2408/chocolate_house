@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Seasonal Flavor</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'management/styles.css' %}">
+</head>
+<body>
+    <h1>Update Seasonal Flavor</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="flavor_name">Flavor Name:</label>
+        <input type="text" name="flavor_name" id="flavor_name" value="{{ flavor.flavor_name }}" required><br>
+        <label for="available_until">Available Until:</label>
+        <input type="date" name="available_until" id="available_until" value="{{ flavor.available_until }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+
