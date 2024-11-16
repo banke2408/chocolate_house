@@ -38,7 +38,7 @@ cd chocolate_house
 
 ### 2. Build and start
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 ### 3. Running the migrations
