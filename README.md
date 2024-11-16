@@ -32,8 +32,8 @@ This application uses **Docker**, **Gunicorn**, and **Nginx** for deployment, wi
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/banke2408/chocolate_house.git
+cd chocolate_house
 ```
 
 ### 2. Build and start
